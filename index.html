@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Infinite Grid Demo</title>
+  <style>
+    .grid {
+      width: 100%
+    }
+    .grid td {
+      border: solid 1px #ddd;
+    }
+    .container {
+      width: 500px;
+      height: 200px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>RxJS Incremental Grid</h2>
+  <p>
+    This data grid (a simple HTML table) is an example of using RxJS to push
+    data incrementally, as we scroll.
+  </p>
+  <div id="container" class="container">
+    <table id="grid" class="grid"></table>
+  </div>
+  <script src="lib/rx.all.js"></script>
+  <script src="lib/rx.dom.js"></script>
+  <script src="app/infinite-grid.js"></script>
+</body>
+</html>
