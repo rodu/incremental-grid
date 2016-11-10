@@ -48,7 +48,7 @@
     });
 
   const scrollStream = Rx.DOM
-    .scroll(document.getElementById('container'))
+    .scroll(document.getElementById('grid-container'))
     .flatMap((event) => {
       const targetHeight = event.target.clientHeight;
       const targetScroll = event.target.scrollTop;
