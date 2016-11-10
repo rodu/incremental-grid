@@ -1,21 +1,25 @@
 {
-  "name": "infinite-grid",
+  "name": "incremental-grid",
   "version": "1.0.0",
   "description": "A small game while learning RxJS",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -o /usr/bin/google-chrome"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rodu/space-invader.git"
+    "url": "git+https://github.com/rodu/incremental-grid.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rodu/space-invader/issues"
+    "url": "https://github.com/rodu/incremental-grid/issues"
   },
-  "homepage": "https://github.com/rodu/space-invader#readme"
+  "homepage": "https://github.com/rodu/incremental-grid#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
 }

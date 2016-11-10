@@ -1,4 +1,4 @@
-(function infiniteGrid(Rx){
+(function incrementalGrid(Rx){
   const DATA_LENGTH = 200;
   const PAGE_SIZE = 20;
 

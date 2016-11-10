@@ -10,21 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>RxJS Incremental Grid Demo</title>
-    <style>
-      .grid {
-        width: 100%
-      }
-      .grid td {
-        border: solid 1px #ddd;
-        padding: 5px;
-      }
-      .grid-container {
-        width: 500px;
-        height: 200px;
-        overflow: auto;
-      }
-    </style>
+    <title>Reactive Incremental Grid Demo</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,6 +23,25 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+
+      .panel-body {
+        padding: 0;
+      }
+      .grid {
+        width: 100%
+      }
+      .grid td {
+        border: solid 1px #ddd;
+        padding: 5px;
+      }
+      .grid-container {
+        width: 100%;
+        height: 200px;
+        overflow: auto;
+      }
+    </style>
+
   </head>
 
   <body>
@@ -44,34 +49,65 @@
     <div class="container">
       <div class="header clearfix">
         <nav>
-          <ul class="nav nav-pills pull-right">
+          <!-- <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="#">About</a></li>
             <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
+          </ul> -->
         </nav>
-        <h3 class="text-muted">Incremental Grid</h3>
+        <h1 class="text-muted">Reactive Incremental Grid</h1>
       </div>
 
-      <h3>Pushing data to the DOM with RxJS</h3>
-      <p>
+      <h2>Pushing data to the DOM with RxJS</h2>
+      <p class="lead">
         This data grid (a simple HTML table) is an example of using RxJS to push
-        data incrementally, as we scroll.
+        data incrementally as we scroll.
       </p>
-      <div id="grid-container" class="grid-container">
-        <table id="grid" class="grid"></table>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Reactive Incremental Grid</h3>
+        </div>
+        <div class="panel-body">
+          <div id="grid-container" class="grid-container">
+            <table id="grid" class="grid"></table>
+          </div>
+        </div>
       </div>
 
-
+      <p>
+        In this example the data set is generated on the fly, and upfront.
+      </p>
+      <p>While scrolling the table downward next chunks of data are loaded
+        as we approach the bottom of the scrollbar.</p>
+      <p>
+        This was a nice exercise to learn the mechanism of pushing data, (versus
+        pulling as we are normally used to) using RxJS. In reality, I also
+        needed this component for other adaptation in a different project, so
+        I decided to develop something first in isolation, and that's the why
+        behind this little project.
+      </p>
+      <p>
+        The data set can be configured to produce any number of rows, and for
+        each row a set of cells with random data can be generated.
+      </p>
+      <p>
+        In a more realistic scenario we could have such data coming from Ajax
+        requests, or a different source.
+      </p>
+      <p>
+        The objective of this project was to understand the mechanism that can
+        be used, and to provide an initial solution that can be built upon.
+      </p>
     </div> <!-- /container -->
 
-      <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
+    <!-- <footer class="footer">
+      <p>&copy; 2016 Company, Inc.</p>
+    </footer> -->
 
-  <script src="lib/rx.all.js"></script>
-  <script src="lib/rx.dom.js"></script>
-  <script src="app/infinite-grid.js"></script>
+    <script src="lib/rx.all.js"></script>
+    <script src="lib/rx.dom.js"></script>
+    <script src="app/incremental-grid.js"></script>
 
   </body>
 </html>
