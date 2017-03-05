@@ -74,30 +74,36 @@
           </div>
         </div>
       </div>
-
+      <h2>Description</h2>
       <p>
-        In this example the data set is generated on the fly, and upfront.
+        In this example the data set is generated on the fly for a maximum of
+        <i>N</i> records.
       </p>
-      <p>While scrolling the table downward next chunks of data are loaded
-        as we approach the bottom of the scrollbar.</p>
+      <p>While scrolling the table (grid) downward additional data are loaded in
+        equal chunks each time we approach the bottom of the grid.
+        With this approach we can consume large amounts of data as needed, loading
+        them in chunks only if required while the user scrolls the grid.
+      </p>
       <p>
-        This was a nice exercise to learn the mechanism of pushing data, (versus
-        pulling as we are normally used to) using RxJS. In reality, I also
-        needed this component for other adaptation in a different project, so
-        I decided to develop something first in isolation, and that's the why
-        behind this little project.
+        This was a nice exercise to learn the mechanism of pushing data to the DOM
+        using RxJS versus pulling as we are normally used to do. I also
+        needed this component for an other application in a different project, so
+        I decided to develop something in isolation resulting in this little project.
       </p>
+      <h2>Configuration</h2>
       <p>
         The data set can be configured to produce any number of rows, and for
         each row a set of cells with random data can be generated.
       </p>
       <p>
-        In a more realistic scenario we could have such data coming from Ajax
-        requests, or a different source.
-      </p>
-      <p>
         The objective of this project was to understand the mechanism that can
         be used, and to provide an initial solution that can be built upon.
+      </p>
+      <p>
+        In a more realistic scenario we would have such data coming from Ajax
+        requests, or a different source. For an example of that kind of application
+        you can look at <a href="https://rodu.github.io/quakemap">QuakeMap</a>, a real-time
+        earthquake visualizer using RxJS and async data loading from a real API.
       </p>
     </div> <!-- /container -->
 
